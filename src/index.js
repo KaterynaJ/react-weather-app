@@ -9,8 +9,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
         <h1>Weather App</h1>
-
-<Search />
+        <Search />
+        <a href='https://github.com/KaterynaJ/shecodes-react-app.git'>Open-source</a>
   </React.StrictMode>
 );
 
