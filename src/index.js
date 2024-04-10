@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
         <h1>Weather App</h1>
         <Search />
-        <a href='https://github.com/KaterynaJ/shecodes-react-app.git'>Open-source</a>
+        <a href="https://github.com/KaterynaJ/shecodes-react-app.git" target="_blank" rel="noreferrer">Open-source</a>
   </React.StrictMode>
 );
 
