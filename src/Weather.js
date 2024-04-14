@@ -1,32 +1,35 @@
-import React, { useState } from "react";
-import axios from "axios";
+import react from "react";
+import scc from "./Weather.css";
 
-export default function Weather(props) {
-  const [temperature, setTemperature] = useState("");
-  const [description, setDescription] = useState("");
-  const [humidity, setHumidity] = useState("");
-  const [wind, setWind] = useState("");
+export default function Weather() {
+  return <div className="weather">
+    <form>
+      <div className="row">
+      <div className="col-9">
+      <input type="search" placeholder="Enter a city..." className="searchField"/>
+      </div>
+      <div className="col-3">
+      <input type="submit" value="Search" className="btn btn-primary"/>
+      </div>
+      </div>
+      </form>
+    <h1>Kyiv, Ukraine</h1>
 
-  if (props.inputCity) {
-    let apiKey = "b35a24906132bc37689e11790af3c759";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.inputCity}&appid=${apiKey}&units=metric`;
-
-    axios.get(url).then(getWeather);
-  }
-  function getWeather(response) {
-    setTemperature(Math.round(response.data.main.temp));
-    setDescription(response.data.weather[0].main);
-    setHumidity(response.data.main.humidity);
-    setWind(Math.round(response.data.wind.speed));
-  }
-  return (
-    <div>
+  <ul>
+      <li>Thursday 12:00AM</li>
+      <li>Mostly Cloudy</li>
+  </ul>
+  <div className="row">
+    <div className="col-6">
+      <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Mostly Cloudy"/>6°C
+      </div>
+    <div className="col-6">
       <ul>
-        <li>Temperature: {temperature}°C</li>
-        <li>Description: {description}</li>
-        <li>Humidity: {humidity}%</li>
-        <li>Wind: {wind}km/h</li>
-      </ul>
+        <li>Precipitation:</li>
+        <li>Humidity:</li>
+        <li>Wind:</li>
+    </ul>
     </div>
-  );
+  </div>
+  </div>
 }
