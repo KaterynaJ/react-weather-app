@@ -15,6 +15,6 @@ if (hours < 0) {
     hours = '0${hours}';
 }
 
-    return <div>{day} {hours}:{minutes}</div>
+    return <div>Last updated: {day} {hours}:{minutes}</div>
 
 }
