@@ -31,12 +31,6 @@
     position: relative;
 }
 
-.weather .weather-emoji {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    vertical-align: top;
-}
 
 .weather .temperature-block {
     display: inline-block;

@@ -15,20 +15,19 @@ export default function WeatherLowerInfo(props) {
 </ul>
     <div className="row">
     <div className="col-6">
-      <WeatherIcon icon={props.data.icon}/>
 
-    <img src={props.data.icon} alt={props.data.description} className="weather-emoji"/>
+  <WeatherIcon code={props.data.icon} alt={props.data.description}/>
 
-  <div className="temperature-block">
+  <span className="temperature-block">
     <WeatherConversion celsius={props.data.temperature}/>
-  </div>
+  </span>
 
 
-      </div>
+    </div>
     <div className="col-6">
       <ul>
         <li>Humidity: {props.data.humidity}%</li>
-        <li>Wind {Math.round(props.data.wind)}km/h</li>
+        <li>Wind: {Math.round(props.data.wind)}km/h</li>
     </ul>
     </div>
   </div>
