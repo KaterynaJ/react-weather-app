@@ -29,7 +29,7 @@ export default function WeatherIcon(props) {
 
     return (
     <span className="emoji">
-        <WeatherSvg state={codeMapping[props.code]} alt={props.alt}/>
+        <WeatherSvg state={codeMapping[props.code]} width={props.width} height={props.height}/>
     </span>
     )
 }

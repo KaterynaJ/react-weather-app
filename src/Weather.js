@@ -52,26 +52,33 @@ function handleSubmit(event) {
 if (loaded) {
 
   return <div className="weather">
+    
   <form onSubmit={handleSubmit}>
     <div className="row">
-    <div className="col-8"> 
-    <input 
-    type="search" 
-    placeholder="Enter a city..." 
-    className="searchField" 
-    autoFocus="on"
-    onChange={handleCityChange}/>
-    </div>
-    <div className="col-4">
-    <input type="submit" value="Search" className="btn btn-primary w-100"/>
-    </div>
+
+        <div className="col-8"> 
+        <input 
+            type="search" 
+            placeholder="Enter a city..." 
+            className="searchField" 
+            autoFocus="on"
+            onChange={handleCityChange}/>
+        </div>
+        
+        <div className="col-4">
+        <input 
+            type="submit" 
+            value="Search" 
+            className="btn btn-primary w-100"/>
+        </div>
+
     </div>
   </form>
 
 
   
 <WeatherLowerInfo data={weatherData}/>
-
+<Forecast data={weatherData}/>
 
 </div>
 } else {

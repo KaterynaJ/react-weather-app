@@ -16,7 +16,7 @@ export default function WeatherLowerInfo(props) {
     <div className="row">
     <div className="col-6">
 
-  <WeatherIcon code={props.data.icon} alt={props.data.description}/>
+  <WeatherIcon code={props.data.icon} alt={props.data.description} width={60} height={60}/>
 
   <span className="temperature-block">
     <WeatherConversion celsius={props.data.temperature}/>
