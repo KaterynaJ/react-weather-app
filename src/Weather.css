@@ -39,3 +39,14 @@
 .weather .temperature-unit {
     position: absolute;
 }
+
+.weather {
+    background-color: var(--main-background-color);
+
+}
+
+.weather .btn {
+    background-color: var(--secondary-background-color);
+    border-color: var(--secondary-background-color);
+    color: var(--secondary-font-color);
+}

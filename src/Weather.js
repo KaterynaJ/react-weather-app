@@ -13,15 +13,17 @@ const [cityInput, setCityInput] = useState(props.defaultCity);
 
 function handleResponse(response) {
   setWeatherData({
-    temperature: response.data.main.temp,
+    temperature: response.data.temperature.current,
     wind: response.data.wind.speed,
-    description: response.data.weather[0].description,
-    humidity: response.data.main.humidity,
-    icon: response.data.weather[0].icon,
-    date: new Date (response.data.dt * 1000),
-    city: response.data.name
+    description: response.data.condition.description,
+    humidity: response.data.temperature.humidity,
+    icon: response.data.condition.icon,
+    date: new Date (response.data.time * 1000),
+    city: response.data.name,
+    coordinates: response.data.coord
   });
-console.log(response.data)
+
+console.log(weatherData.coordinates)
 
 
   setLoaded(true);
@@ -29,12 +31,13 @@ console.log(response.data)
 
 
 function search() {
-const apiKey = "ed8ae435e1581343295b91b83d4ecef4";
-let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=${units}`;
+  const apiKey = "57cdf82e2de3o0146tca4739b468cac4";
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityInput}&key=${apiKey}&units=${units}`;
 
 
-axios.get(apiUrl).then(handleResponse);
+
+  axios.get(apiUrl).then(handleResponse);
 }
 
 
@@ -78,7 +81,7 @@ if (loaded) {
 
   
 <WeatherLowerInfo data={weatherData}/>
-<Forecast data={weatherData}/>
+<Forecast data={weatherData} coordinates={weatherData.coordinates}/>
 
 </div>
 } else {
@@ -89,3 +92,4 @@ return "Loading..."
 
 }
 }
+
