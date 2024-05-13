@@ -23,12 +23,17 @@ return (
             <div className="row">
 
     {forecastData.map(function(dailyForecast, index) {
+
+        if (index < 6) {
         return    (
                     <div className="col" key={index}>
             <ForecastDay data={dailyForecast}/>
                     </div>
         )
-                })}
+                } else {
+                    return null
+                }
+    })}
 
              
      
