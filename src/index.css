@@ -1,9 +1,9 @@
 :root {
     --main-font: #arial, sans-serif;
-    --main-font-color: #878787;
-    --secondary-font-color: #E3E8E4;
-    --main-background-color: #E3E8E4;
-    --secondary-background-color: #667865;
+    --main-font-color: #bcbcb2;
+    --secondary-font-color:  #060e24;
+    --main-background-color: #0a2441;
+    --secondary-background-color: #727d17;
 }
 
 body {

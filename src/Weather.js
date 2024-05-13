@@ -19,11 +19,12 @@ function handleResponse(response) {
     humidity: response.data.temperature.humidity,
     icon: response.data.condition.icon,
     date: new Date (response.data.time * 1000),
-    city: response.data.name,
-    coordinates: response.data.coord
+    city: response.data.city,
+    longitude: response.data.coordinates.longitude,
+    latitude: response.data.coordinates.latitude
   });
 
-console.log(weatherData.coordinates)
+
 
 
   setLoaded(true);
@@ -51,6 +52,7 @@ function handleSubmit(event) {
       setCityInput(event.target.value);
 
     }
+    
 
 if (loaded) {
 
@@ -81,7 +83,7 @@ if (loaded) {
 
   
 <WeatherLowerInfo data={weatherData}/>
-<Forecast data={weatherData} coordinates={weatherData.coordinates}/>
+<Forecast data={weatherData} latitude={weatherData.latitude} longitude={weatherData.longitude}/>
 
 </div>
 } else {
