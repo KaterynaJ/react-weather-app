@@ -24,7 +24,7 @@
 }
 
 .weather .temperature-degree {
-    color: black;
+    color: var(--secondary-font-color);
     font-weight: 400;
     font-size: 48px;
     line-height: 56px;
