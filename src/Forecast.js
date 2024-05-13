@@ -7,9 +7,9 @@ export default function Forecast(props) {
     let [loaded, setLoaded] = useState(false);
     let [forecastData, setForecastData] = useState(null);
 
-    useEffect(() => {
-setLoaded(false)
-    }, [props.longitude]);
+                useEffect(() => {
+            setLoaded(false)
+                }, [props.longitude]);
 
     function getForecastData(response) {
         setForecastData(response.data.daily);
@@ -24,7 +24,7 @@ return (
 
     {forecastData.map(function(dailyForecast, index) {
 
-        if (index < 6) {
+        if (index < 4) {
         return    (
                     <div className="col" key={index}>
             <ForecastDay data={dailyForecast}/>
