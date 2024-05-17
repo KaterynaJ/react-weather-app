@@ -1,52 +1,50 @@
 .weather {
-    border: 1px solid grey;
-    border-radius: 10px;
-    padding: 16px;
-    max-width: 598px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 16px;
+  max-width: 598px;
 }
 
 .weather h1 {
-    font-size: 24px;
-    font-weight: 100;
-    line-height: 29px;
-    margin: 20px 0 0 0;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 29px;
+  margin: 20px 0 0 0;
 }
 
 .weather li {
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 19px;
-    list-style: none;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  list-style: none;
 }
 
 .weather ul {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .weather .temperature-degree {
-    color: var(--secondary-font-color);
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 56px;
-    position: relative;
+  color: var(--secondary-font-color);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  position: relative;
 }
 
-
 .weather .temperature-block {
-    display: inline-block;
+  display: inline-block;
 }
 
 .weather .temperature-unit {
-    position: absolute;
+  position: absolute;
 }
 
 .weather {
-    background-color: var(--main-background-color);
-
+  background-color: var(--main-background-color);
 }
 
 .weather .btn {
-    background-color: var(--secondary-background-color);
-    border-color: var(--secondary-background-color);
-    color: var(--secondary-font-color);
+  background-color: var(--secondary-background-color);
+  border-color: var(--secondary-background-color);
+  color: var(--secondary-font-color);
 }

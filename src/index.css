@@ -1,12 +1,12 @@
 :root {
-    --main-font: #arial, sans-serif;
-    --main-font-color: #bcbcb2;
-    --secondary-font-color:  #bcbcb2;
-    --main-background-color: #0a2441;
-    --secondary-background-color: #727d17;
+  --main-font: #arial, sans-serif;
+  --main-font-color: #bcbcb2;
+  --secondary-font-color: #bcbcb2;
+  --main-background-color: #0a2441;
+  --secondary-background-color: #727d17;
 }
 
 body {
-    font-family: var(--main-font);
-    color: var(--main-font-color);
+  font-family: var(--main-font);
+  color: var(--main-font-color);
 }
