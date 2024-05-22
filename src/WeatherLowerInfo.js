@@ -8,12 +8,9 @@ export default function WeatherLowerInfo(props) {
     <div>
       <h1>{props.data.city}</h1>
 
-      <ul>
-        <li>
+      <div>
           <FormattedDate date={props.data.date} />
-        </li>
-        <li className="text-capitalize">{props.data.description}</li>
-      </ul>
+      </div>
       <div className="row">
         <div className="col-6">
           <WeatherIcon
@@ -29,6 +26,7 @@ export default function WeatherLowerInfo(props) {
         </div>
         <div className="col-6">
           <ul>
+            <li className="text-capitalize">{props.data.description}</li>
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {Math.round(props.data.wind)}km/h</li>
           </ul>
