@@ -7,6 +7,8 @@ export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecastData, setForecastData] = useState(null);
 
+  const apiURLBase = process.env.REACT_APP_API_URL_FORECAST;
+
   useEffect(() => {
     setLoaded(false);
   }, [props.longitude]);
@@ -35,8 +37,8 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let apiKey = "57cdf82e2de3o0146tca4739b468cac4";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${props.longitude}&lat=${props.latitude}&key=${apiKey}`;
+    let apiKey = process.env.REACT_APP_API_KEY_FORECAST;
+    let apiUrl = `${apiURLBase}${props.longitude}&lat=${props.latitude}&key=${apiKey}`;
 
     axios.get(apiUrl).then(getForecastData);
     console.log(apiUrl);
