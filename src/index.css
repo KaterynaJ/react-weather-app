@@ -12,12 +12,19 @@ body {
 
 }
 
-@media (min-width: 480px) {
+@media (min-width: 1025px) {
   body {
     background-image: url("/public/images/desktop-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 482px) and (max-width: 1024px) {
+  body {
+    background-image: url("/public/images/tablet-background.jpg");
     overflow-x: hidden;
   }
 }
