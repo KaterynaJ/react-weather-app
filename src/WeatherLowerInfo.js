@@ -2,13 +2,14 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherConversion from "./WeatherConversion";
+import "./WeatherLowerInfo.css"
 
 export default function WeatherLowerInfo(props) {
   return (
     <div>
       <h1>{props.data.city}</h1>
 
-      <div>
+      <div className="formatted-date">
           <FormattedDate date={props.data.date} />
       </div>
       <div className="row">

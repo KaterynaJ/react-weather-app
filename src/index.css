@@ -26,6 +26,8 @@ body {
   body {
     background-image: url("/public/images/tablet-background.jpg");
     overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
   }
 }
 
