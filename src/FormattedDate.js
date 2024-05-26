@@ -1,5 +1,5 @@
 import React from "react";
-import "./FormattedDate.css"
+import "./FormattedDate.css";
 
 export default function FormattedDate(props) {
   let days = [
@@ -15,17 +15,12 @@ export default function FormattedDate(props) {
   let hours = props.date.getHours();
   let minutes = props.date.getMinutes();
 
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
+  let formattedMinutes = minutes.toString().padStart(2, "0");
+  let formattedHours = hours.toString().padStart(2, "0");
 
   return (
     <div className="italic">
-      Last updated: {day} {hours}:{minutes}
+      Last updated: {day} {formattedHours}:{formattedMinutes}
     </div>
   );
 }
