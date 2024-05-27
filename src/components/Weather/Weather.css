@@ -48,3 +48,11 @@
   border-color: var(--secondary-background-color);
   color: var(--secondary-font-color);
 }
+
+.weather .search-field {
+  display: flex;
+}
+
+.weather .searchField {
+  border-radius: 0.375rem;
+}

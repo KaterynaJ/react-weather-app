@@ -3,7 +3,7 @@
   --main-font-color: #bcbcb2;
   --secondary-font-color: #bcbcb2;
   --main-background-color: #0a2441;
-  --secondary-background-color: #727d17;
+  --secondary-background-color: rgb(13, 110, 253);
 }
 
 body {
