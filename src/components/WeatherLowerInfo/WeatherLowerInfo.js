@@ -2,7 +2,7 @@ import React from "react";
 import FormattedDate from "../FormattedDate/FormattedDate";
 import WeatherIcon from "../WeatherIcon/WeatherIcon";
 import WeatherConversion from "../WeatherConversion/WeatherConversion";
-import "./WeatherLowerInfo.css"
+import "./WeatherLowerInfo.css";
 
 export default function WeatherLowerInfo(props) {
   return (
@@ -10,7 +10,7 @@ export default function WeatherLowerInfo(props) {
       <h1>{props.data.city}</h1>
 
       <div className="formatted-date">
-          <FormattedDate date={props.data.date} />
+        <FormattedDate date={props.data.date} />
       </div>
       <div className="row">
         <div className="col-6">
