@@ -41,7 +41,6 @@ export default function Forecast(props) {
     let apiUrl = `${apiURLBase}${props.longitude}&lat=${props.latitude}&key=${apiKey}`;
 
     axios.get(apiUrl).then(getForecastData);
-    console.log(apiUrl);
 
     return null;
   }

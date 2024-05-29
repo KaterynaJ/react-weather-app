@@ -33,6 +33,7 @@ export default function Weather(props) {
     let apiUrl = `${apiUrlBase}${cityInput}&key=${apiKey}&units=${units}`;
 
     axios.get(apiUrl).then(handleResponse);
+    console.log(apiUrl);
   }
 
   function handleSubmit(event) {

@@ -9,7 +9,7 @@
 body {
   font-family: var(--main-font);
   color: var(--main-font-color);
-
+  overflow-x: hidden;
 }
 
 @media (min-width: 1025px) {
@@ -18,22 +18,19 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    overflow-x: hidden;
   }
 }
 
 @media (min-width: 482px) and (max-width: 1024px) {
   body {
-    background-image: url("/public/images/tablet-background.jpg");
-    overflow-x: hidden;
+    background-image: url("/public/images/mobile-background.jpg");
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
 @media (max-width: 481px) {
   body {
     background-image: url("/public/images/mobile-background.jpg");
-    overflow-x: hidden;
   }
 }
