@@ -26,8 +26,8 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = process.env.REACT_APP_API_KEY_CURRENT;
-    const apiUrlBase = process.env.REACT_APP_API_URL_CURRENT;
+    const apiKey = process.env.VITE_API_KEY_CURRENT;
+    const apiUrlBase = process.env.VITE_API_URL_CURRENT;
 
     let units = "metric";
     let apiUrl = `${apiUrlBase}${cityInput}&key=${apiKey}&units=${units}`;
