@@ -7,7 +7,7 @@ export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecastData, setForecastData] = useState(null);
 
-  const apiURLBase = process.env.REACT_APP_API_URL_FORECAST;
+  const apiURLBase = import.meta.env.VITE_API_URL_FORECAST;
 
   useEffect(() => {
     setLoaded(false);
@@ -37,7 +37,7 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let apiKey = process.env.REACT_APP_API_KEY_FORECAST;
+    let apiKey = import.meta.env.VITE_API_KEY_FORECAST;
     let apiUrl = `${apiURLBase}${props.longitude}&lat=${props.latitude}&key=${apiKey}`;
 
     axios.get(apiUrl).then(getForecastData);

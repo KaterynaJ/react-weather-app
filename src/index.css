@@ -6,8 +6,9 @@
   --secondary-background-color: rgb(13, 110, 253);
 }
 
-html, body {
-  height: 100%; 
+html,
+body {
+  height: 100%;
   margin: 0;
 }
 
@@ -23,20 +24,18 @@ body {
 
 @media (max-width: 481px) {
   body {
-    background-image: url("/public/images/mobile-background.jpg");
+    background-image: url("/images/mobile-background.jpg");
   }
 }
 
 @media (min-width: 482px) and (max-width: 1368px) {
   body {
-    background-image: url("/public/images/mobile-background.jpg");
+    background-image: url("/images/mobile-background.jpg");
   }
 }
 
 @media (min-width: 1369px) {
   body {
-    background-image: url("/public/images/desktop-background.jpg");
+    background-image: url("/images/desktop-background.jpg");
   }
 }
-
-
